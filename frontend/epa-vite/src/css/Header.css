@@ -1,0 +1,75 @@
+header {
+	display: flex;
+	flex-direction: column;
+	border-right: 2px #ddd solid;
+	width: 220px;
+	position: fixed;
+
+	height: 100%;
+}
+
+/* logo */
+
+header img {
+	object-fit: contain;
+	height: 90px;
+	margin: 4px;
+}
+
+/* nav */
+
+nav {
+	align-items: center;
+}
+
+nav p {
+	position: relative;
+}
+
+nav button {
+	font-family: "9Plus Jakarta Sans", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	padding: 17px 0 15px 42px;
+	margin: 10px;
+	border-radius: 7px;
+	border: 0;
+	background-color: #fff;
+	width: 90%;
+	text-align: left;
+	line-height: normal;
+	cursor: pointer;
+}
+
+nav button:hover {
+	background-color: #ddd;
+}
+
+nav button::before {
+	content: "";
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-right: 0.3em;
+	top: 23px;
+	position: absolute;
+	left: 21px;
+}
+
+nav .btnDashboard::before {
+	background-image: url("/img/DashboardIcon.svg");
+}
+
+nav .btnEventPlanner::before {
+	background-image: url("/img/EventPlannerIcon.svg");
+}
+
+nav .btnVendorHub::before {
+	background-image: url("/img/VendorHubIcon.svg");
+}
+
+nav .btnTaskManager::before {
+	background-image: url("/img/TaskManagerIcon.svg");
+}
