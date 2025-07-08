@@ -1,10 +1,8 @@
 header {
 	display: flex;
 	flex-direction: column;
-	border-right: 2px #ddd solid;
 	width: 220px;
 	position: fixed;
-
 	height: 100%;
 }
 
@@ -26,36 +24,51 @@ nav p {
 	position: relative;
 }
 
-nav button {
-	font-family: "9Plus Jakarta Sans", sans-serif;
-	font-weight: 400;
-	font-size: 18px;
-	padding: 17px 0 15px 42px;
-	margin: 10px;
+nav a {
+	font-family: "Inter", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	padding: 14px 0 12px 42px;
+	margin: 20px 10px;
 	border-radius: 7px;
-	border: 0;
-	background-color: #fff;
 	width: 90%;
 	text-align: left;
-	line-height: normal;
 	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	color: #555;
 }
 
-nav button:hover {
+nav a:hover {
+	color: #000;
+}
+
+nav a.active {
 	background-color: #ddd;
+	color: #000;
 }
 
-nav button::before {
+nav a::before {
 	content: "";
 	display: inline-block;
-	width: 25px;
-	height: 25px;
+	width: 21px;
+	height: 21px;
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-right: 0.3em;
-	top: 23px;
+	margin-top: -10px;
 	position: absolute;
+	top: 23px;
 	left: 21px;
+	filter: invert(33%) brightness(150%);
+}
+
+nav a:hover::before {
+	filter: none;
+}
+
+nav a.active::before {
+	filter: none;
 }
 
 nav .btnDashboard::before {

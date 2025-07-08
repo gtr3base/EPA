@@ -1,4 +1,5 @@
 import logo from "/img/logo.png";
+import { NavLink } from "react-router";
 import "../css/Header.css";
 
 const Header = () => {
@@ -9,16 +10,24 @@ const Header = () => {
 			</div>
 			<nav>
 				<p>
-					<button className="btnDashboard">Dashboard</button>
+					<NavLink className="btnDashboard" to="/">
+						Dashboard
+					</NavLink>
 				</p>
 				<p>
-					<button className="btnEventPlanner">Event Planner</button>
+					<NavLink className="btnEventPlanner" to="/events">
+						Event Planner
+					</NavLink>
 				</p>
 				<p>
-					<button className="btnVendorHub">Vendor Hub</button>
+					<NavLink className="btnVendorHub" to="/vendors">
+						Vendor Hub
+					</NavLink>
 				</p>
 				<p>
-					<button className="btnTaskManager">Task Manager</button>
+					<NavLink className="btnTaskManager" to="/tasks">
+						Task Manager
+					</NavLink>
 				</p>
 			</nav>
 			<div></div>
