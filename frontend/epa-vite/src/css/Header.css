@@ -2,8 +2,6 @@ header {
 	display: flex;
 	flex-direction: column;
 	width: 220px;
-	position: fixed;
-	height: 100%;
 }
 
 /* logo */
